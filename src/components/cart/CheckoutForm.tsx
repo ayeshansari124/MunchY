@@ -4,16 +4,16 @@ import Input from "@/components/ui/Input";
 import Link from "next/link";
 
 type Address = {
-  phone?: string;
-  street?: string;
-  city?: string;
-  postalCode?: string;
-  country?: string;
+  phone: string;
+  street: string;
+  city: string;
+  postalCode: string;
+  country: string;
 };
 
-type Props = {
+type CheckoutFormProps = {
   address: Address;
-  setAddress: (a: Address) => void;
+  setAddress: React.Dispatch<React.SetStateAction<Address>>;
   onPay: () => void;
   total: number;
 };
@@ -23,65 +23,105 @@ export default function CheckoutForm({
   setAddress,
   onPay,
   total,
-}: Props) {
+}: CheckoutFormProps) {
+  /* ================= CHECK IF PROFILE COMPLETE ================= */
+
   const isIncomplete =
-    !address.phone ||
-    !address.street ||
-    !address.city ||
-    !address.postalCode ||
-    !address.country;
+    !address.phone.trim() ||
+    !address.street.trim() ||
+    !address.city.trim() ||
+    !address.postalCode.trim() ||
+    !address.country.trim();
 
   return (
     <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
-      <h2 className="text-xl font-bold">Checkout</h2>
+      {/* HEADER */}
+      <div>
+        <h2 className="text-2xl font-bold">Checkout</h2>
 
+        <p className="text-sm text-gray-500 mt-1">
+          Delivery details for your order
+        </p>
+      </div>
+
+      {/* PHONE */}
       <Input
         label="Phone"
-        value={address.phone || ""}
-        onChange={(v) => setAddress({ ...address, phone: v })}
+        value={address.phone}
+        onChange={(v) =>
+          setAddress((prev) => ({
+            ...prev,
+            phone: v,
+          }))
+        }
       />
 
+      {/* STREET */}
       <Input
         label="Street"
-        value={address.street || ""}
-        onChange={(v) => setAddress({ ...address, street: v })}
+        value={address.street}
+        onChange={(v) =>
+          setAddress((prev) => ({
+            ...prev,
+            street: v,
+          }))
+        }
       />
 
-      <div className="flex gap-3">
+      {/* CITY + POSTAL */}
+      <div className="grid grid-cols-2 gap-3">
         <Input
           label="City"
-          value={address.city || ""}
-          onChange={(v) => setAddress({ ...address, city: v })}
+          value={address.city}
+          onChange={(v) =>
+            setAddress((prev) => ({
+              ...prev,
+              city: v,
+            }))
+          }
         />
+
         <Input
           label="Postal Code"
-          value={address.postalCode || ""}
+          value={address.postalCode}
           onChange={(v) =>
-            setAddress({ ...address, postalCode: v })
+            setAddress((prev) => ({
+              ...prev,
+              postalCode: v,
+            }))
           }
         />
       </div>
 
+      {/* COUNTRY */}
       <Input
         label="Country"
-        value={address.country || ""}
-        onChange={(v) => setAddress({ ...address, country: v })}
+        value={address.country}
+        onChange={(v) =>
+          setAddress((prev) => ({
+            ...prev,
+            country: v,
+          }))
+        }
       />
 
-      {/* ⚠️ PROFILE WARNING */}
+      {/* WARNING */}
       {isIncomplete && (
-        <p className="text-sm text-red-600 font-medium">
-          Please{" "}
+        <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+          <p className="text-sm text-red-700 leading-relaxed">
+            Please complete your delivery details before proceeding to payment.
+          </p>
+
           <Link
             href="/profile"
-            className="underline font-semibold"
+            className="inline-block mt-2 text-sm font-semibold text-red-600 underline"
           >
-            complete your profile
-          </Link>{" "}
-          to proceed with payment.
-        </p>
+            Go to Profile
+          </Link>
+        </div>
       )}
 
+      {/* PAY BUTTON */}
       <button
         onClick={onPay}
         disabled={isIncomplete}
