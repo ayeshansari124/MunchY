@@ -6,7 +6,9 @@ import { requireAdmin } from "@/lib/auth";
 export async function GET() {
   try {
     await requireAdmin();
+
     await connectDB();
+
     const orders = await Order.find()
       .populate("user", "name")
       .sort({ createdAt: -1 });

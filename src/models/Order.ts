@@ -1,30 +1,47 @@
-import mongoose, { Schema, models } from "mongoose";
-
-const extraPriceSchema = new Schema(
-  {
-    name: { type: String, required: true },
-    price: { type: Number, required: true },
-  },
-  { _id: false }
-);
+import mongoose, { Schema, models, model } from "mongoose";
 
 const OrderItemSchema = new Schema({
   name: String,
+  image: String,
   quantity: Number,
-  basePrice: Number,
-  selectedSize: { type: [extraPriceSchema], default: [] },
-  selectedExtras: { type: [extraPriceSchema], default: [] },
+
+  selectedSize: {
+    name: String,
+    price: Number,
+  },
+
+  selectedExtras: [
+    {
+      name: String,
+      price: Number,
+    },
+  ],
+
   finalPrice: Number,
+});
+
+const AddressSchema = new Schema({
+  phone: String,
+  street: String,
+  city: String,
+  postalCode: String,
+  country: String,
 });
 
 const OrderSchema = new Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Types.ObjectId,
       ref: "User",
     },
 
+    userEmail: String,
+
+    customerName: String,
+
     items: [OrderItemSchema],
+
+    address: AddressSchema,
 
     total: Number,
 
@@ -33,14 +50,23 @@ const OrderSchema = new Schema(
       default: false,
     },
 
-    completed: {
-      type: Boolean,
-      default: false,
+    status: {
+      type: String,
+      enum: [
+        "pending",
+        "preparing",
+        "out-for-delivery",
+        "delivered",
+        "cancelled",
+      ],
+      default: "pending",
     },
-
-    paymentIntentId: String,
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  },
 );
 
-export default models.Order || mongoose.model("Order", OrderSchema);
+const Order = models.Order || model("Order", OrderSchema);
+
+export default Order;
