@@ -1,117 +1,193 @@
-# 🍕 MunchY – Full-Stack Food Ordering Platform
+# 🍔 MunchY - Food Ordering Platform
 
-A modern full-stack food ordering application to **browse menus, customize food items, manage carts, and place orders seamlessly**, with admin management, secure authentication, and a clean, responsive UI.  
-Built using **Next.js, React, MongoDB, and Razorpay**, with a strong focus on **real-world architecture, reusability, and production-ready patterns**.
+MunchY is a full-stack food ordering platform where users can explore menu items, customize orders, manage profiles, and place online food orders with secure payments.
+
+## 🌐 Live Demo
+
+https://munch-y.vercel.app/
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🍽️ Food Ordering System
-- Browse food items by category
-- View detailed food cards with images & descriptions
-- Customize items with:
-  - Multiple sizes
-  - Extra ingredients
-- Add items to cart **without login**
-- Dynamic price calculation
+### ✨ User Features
+
+- User registration and login
+- Browse recently added food items
+- Explore menu by categories
+- Add customizable items to cart
+- Size and extra ingredient selection
+- Cart and checkout system
+- Autofilled delivery details from profile
+- Razorpay payment integration
+- Order history tracking
+- Profile management and editing
+- About and Contact pages
+- Responsive design across devices
+
+---
+
+### 🛠️ Admin Features
+
+- Admin authentication
+- Create, edit, and delete categories
+- Create, edit, and delete menu items
+- Upload food images
+- Manage orders
+- Update order statuses
+- View all customer orders
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+- Next.js
+- React.js
+- Tailwind CSS
+- TypeScript
+
+### Backend
+- Next.js API Routes
+- MongoDB
+- Mongoose
+- NextAuth
+- JWT Authentication
+- bcrypt
+- Razorpay
+- Cloudinary
+
+---
+
+## 🔑 Admin Credentials
+
+```bash
+Email: ayeshansari124@gmail.com
+Password: ayesha
+```
+
+---
+
+# 📸 Screenshots
+
+## 👤 User Side
+
+### 🏠 Homepage
+![Homepage](./screenshots/homepage.png)
+
+---
+
+### 🆕 Recently Added Items
+![Recently Added](./screenshots/recently-added.png)
+
+---
+
+### 🍽️ Menu Categories
+![Menu](./screenshots/menu.png)
+
+---
+
+### 🔐 Authentication
+![Login](./screenshots/login.png)
+
+---
+
+### 🍔 Product Customization
+![Customization](./screenshots/customization.png)
+
+---
+
+### 🍝 Extra Ingredients & Sizes
+![Extras](./screenshots/extras.png)
 
 ---
 
 ### 🛒 Cart & Checkout
-- Persistent cart using **React Context**
-- Cart accessible even for guest users
-- Quantity, size & extras tracking
-- Checkout form with address inputs
-- **Auto-fill checkout address from user profile**
-- Login required **only at payment time**
-- Secure online payment using **Razorpay**
+![Cart](./screenshots/cart-checkout.png)
 
 ---
 
-### 👤 User Authentication & Profile
-- Register / Login / Logout
-- Secure authentication using **HTTP-only cookies**
-- Persistent sessions
-- User profile management:
-  - Name
-  - Phone
-  - Delivery address
-- Profile updates instantly reflected in checkout
+### 💳 Razorpay Payment
+![Payment](./screenshots/razorpay-payment.png)
 
 ---
 
-### 🛠️ Admin Panel
-- Admin-only access
-- Category management (create / update / delete)
-- Menu item management:
-  - Image upload
-  - Base price
-  - Sizes
-  - Extra ingredients
-- Order management:
-  - View all orders
-  - Mark orders as completed
-- Clean capsule-style admin navigation
+### 👤 Profile Management
+![Profile](./screenshots/profile.png)
 
 ---
 
-## 🌐 Frontend Architecture
-- Built with **Next.js (App Router)**
-- Modular structure:
-  - `app/` – routes & layouts
-  - `components/` – reusable UI components
-  - `hooks/` – business logic & API interaction
-  - `context/` – global cart state
-  - `lib/` – centralized API utilities
-- Fully responsive design (mobile, tablet, desktop)
-- Styled using **Tailwind CSS**
-- Custom animations & transitions
-- Global font using **Nunito**
+### ✏️ Edit Profile
+![Edit Profile](./screenshots/edit-profile.png)
 
 ---
 
-## 🧠 Backend Architecture
-- REST API built with **Node.js + Express**
-- **MongoDB + Mongoose** for data modeling
-- Cookie-based authentication
-- Role-based authorization (admin / user)
-- Image uploads using **Multer**
-- Razorpay order & payment verification
-- Secure CORS configuration
+### 📦 Order History
+![Orders](./screenshots/order-history.png)
 
 ---
 
-## 🛠 Tech Stack
-
-### Frontend
-- Next.js (App Router)
-- React
-- TypeScript
-- Tailwind CSS
-- React Context API
-- Razorpay Checkout
-
-### Backend
-- Node.js
-- Express
-- MongoDB
-- Mongoose
-- Razorpay API
-- Multer
-- Cookie-based authentication
+### ℹ️ About Page
+![About](./screenshots/about-page.png)
 
 ---
 
-## 📚 Learnings
-- Designing a **scalable full-stack architecture**
-- Implementing **guest-to-authenticated checkout flows**
-- Centralizing API calls for maintainability
-- Managing complex UI state with Context + Hooks
-- Handling real payment gateways securely
-- Building admin dashboards with role protection
-- Creating a fully responsive production-grade UI
+### 📞 Contact Page
+![Contact](./screenshots/contact-page.png)
 
 ---
 
-### Built with ❤️ by Ayesha
+## 🛠️ Admin Side
+
+### 📂 Category Management
+![Categories](./screenshots/admin-categories.png)
+
+---
+
+### ➕ Create Menu Items
+![Create Menu](./screenshots/create-menu.png)
+
+---
+
+### ✏️ Manage Menu Items
+![Manage Menu](./screenshots/manage-menu.png)
+
+---
+
+### 📦 Order Management
+![Admin Orders](./screenshots/admin-orders.png)
+
+---
+
+## 🧠 What I Learned
+
+- Authentication with NextAuth
+- Razorpay payment workflows
+- Cart and checkout systems
+- Dynamic food customization logic
+- MongoDB schema design
+- Admin dashboard workflows
+- Cloudinary image handling
+- Building scalable Next.js applications
+- API route handling
+- State and profile management
+
+---
+
+## 💡 Future Improvements
+
+- Live order tracking
+- Coupon system
+- Reviews and ratings
+- Favorite items
+- Real-time notifications
+- Delivery partner integration
+- AI food recommendations
+
+---
+
+## 👩‍💻 Author
+
+**Ayesha Ansari**
+
+Built with ❤️ using Next.js, MongoDB, Tailwind CSS, and Razorpay
