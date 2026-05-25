@@ -11,7 +11,7 @@ const slides = [
   { title: "Salad", subtitle: "Feel fresh, feel good with a", image: "/salad.webp" },
   { title: "Fries", subtitle: "Enjoy crunchy and crispy", image: "/fries.avif" },
   { title: "Ice Cream", subtitle: "Cold happiness in every bite of", image: "/icecream2.webp" },
-  { title: "Pasta", subtitle: "Comfort food at its best? A", image: "/pasta1.jpg" },
+  { title: "Pasta", subtitle: "Comfort food at its best? A", image: "/pasta.png" },
 ];
 
 export default function Hero() {
