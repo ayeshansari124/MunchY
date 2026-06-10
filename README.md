@@ -62,100 +62,28 @@ https://munch-y.vercel.app/
 ## 🔑 Admin Credentials
 
 ```bash
+
 Email: ayeshansari124@gmail.com
-Password: ayesha
+Password: Admin access available for demonstration purposes upon request.
+
 ```
 
 ---
+## 🎥 Project Demo
 
-# 📸 Screenshots
+### 👤 User Experience
 
-## 👤 User Side
+Browse menu items, customize food, manage cart, complete payments, and track orders.
 
-### 🏠 Homepage
-![Homepage](./screenshots/homepage.png)
-
----
-
-### 🆕 Recently Added Items
-![Recently Added](./screenshots/recently-added.png)
+[![User Demo](./user-demo-thumbnail.png)](https://ayeshansari124.github.io/MunchY/demo.html)
 
 ---
 
-### 🍽️ Menu Categories
-![Menu](./screenshots/menu.png)
+### 🛠️ Admin Dashboard
 
----
+Manage categories, menu items, customer orders, and platform operations.
 
-### 🔐 Authentication
-![Login](./screenshots/login.png)
-
----
-
-### 🍔 Product Customization
-![Customization](./screenshots/customization.png)
-
----
-
-### 🍝 Extra Ingredients & Sizes
-![Extras](./screenshots/extras.png)
-
----
-
-### 🛒 Cart & Checkout
-![Cart](./screenshots/cart-checkout.png)
-
----
-
-### 💳 Razorpay Payment
-![Payment](./screenshots/razorpay-payment.png)
-
----
-
-### 👤 Profile Management
-![Profile](./screenshots/profile.png)
-
----
-
-### ✏️ Edit Profile
-![Edit Profile](./screenshots/edit-profile.png)
-
----
-
-### 📦 Order History
-![Orders](./screenshots/order-history.png)
-
----
-
-### ℹ️ About Page
-![About](./screenshots/about-page.png)
-
----
-
-### 📞 Contact Page
-![Contact](./screenshots/contact-page.png)
-
----
-
-## 🛠️ Admin Side
-
-### 📂 Category Management
-![Categories](./screenshots/admin-categories.png)
-
----
-
-### ➕ Create Menu Items
-![Create Menu](./screenshots/create-menu.png)
-
----
-
-### ✏️ Manage Menu Items
-![Manage Menu](./screenshots/manage-menu.png)
-
----
-
-### 📦 Order Management
-![Admin Orders](./screenshots/admin-orders.png)
+[![Admin Demo](./admin-demo-thumbnail.png)](https://ayeshansari124.github.io/MunchY/demo.html)
 
 ---
 
